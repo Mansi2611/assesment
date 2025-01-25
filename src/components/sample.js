@@ -1,6 +1,5 @@
 
 
-
 import React, { useState, useEffect } from "react";
 import { ArrowRightIcon, ArrowLeftIcon } from "@heroicons/react/24/solid";
 
@@ -66,40 +65,29 @@ export default function ProjectsPage() {
         }}
       >
         {/* Left Section */}
-        
+        <div className="w-full lg:w-1/4 flex flex-col items-center justify-center bg-transparent px-8 order-1 lg:order-1 mb-6 lg:mb-40">
+          <h2 className="text-5xl font-bold text-slate-700 mb-6 text-center lg:text-left">
+            Latest
+            <br />
+            Projects
+          </h2>
 
-
-
-<div className="w-full lg:w-1/4 flex flex-col items-center justify-center bg-transparent px-8 order-1 lg:order-1 mb-6 ml-21 lg:mb-40">
-<h2 className="text-5xl font-bold text-slate-700 mb-6 text-center lg:text-left">
-  Latest
-  <br/>
-   Projects
-</h2>
-
-{/* Hide Arrow Image and Buttons on Small Screens */}
-<img
-  src="https://www.matrixbricks.com/img/icon/arrow.webp"
-  alt="arrow"
-  className="mb-6 hidden lg:block "
-/>
-
-{/* Arrow buttons for large screens */}
-<div className="flex items-center gap-4 sm:hidden lg:flex">
-  <button
-    onClick={scrollPrev}
-    className="bg-transparent cursor-pointer border-2 border-black text-black hover:text-white hover:bg-black py-2 px-2 rounded-full flex justify-center items-center"
-  >
-    <ArrowLeftIcon className="w-6 h-6" />
-  </button>
-  <button
-    onClick={scrollNext}
-    className="bg-transparent cursor-pointer border-2 border-black text-black hover:text-white hover:bg-black py-2 px-2 rounded-full flex justify-center items-center"
-  >
-    <ArrowRightIcon className="w-6 h-6" />
-  </button>
-</div>
-</div>
+          {/* Arrow buttons for large screens */}
+          <div className="flex items-center gap-4 sm:hidden lg:flex">
+            <button
+              onClick={scrollPrev}
+              className="bg-transparent cursor-pointer border-2 border-black text-black hover:text-white hover:bg-black py-2 px-2 rounded-full flex justify-center items-center"
+            >
+              <ArrowLeftIcon className="w-6 h-6" />
+            </button>
+            <button
+              onClick={scrollNext}
+              className="bg-transparent cursor-pointer border-2 border-black text-black hover:text-white hover:bg-black py-2 px-2 rounded-full flex justify-center items-center"
+            >
+              <ArrowRightIcon className="w-6 h-6" />
+            </button>
+          </div>
+        </div>
 
         {/* Right Section (Carousel) */}
         <div className="w-full lg:w-3/4 sm overflow-hidden order-2 lg:order-2">
@@ -165,8 +153,4 @@ export default function ProjectsPage() {
     </>
   );
 }
-
-
-
-
 
