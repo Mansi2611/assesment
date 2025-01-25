@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { PhoneIcon } from '@heroicons/react/24/outline' 
+import { PhoneIcon } from '@heroicons/react/24/outline' // Importing the Heroicon for the call icon
 import NavigationSection from './NavigationSection'
 
 export default function Navbar() {
@@ -45,7 +45,7 @@ export default function Navbar() {
         <select
           value={selectedOption}
           onChange={handleDropdownChange}
-          className="bg-gray-700 text-white border-none rounded-md px-3 py-2 focus:ring-2 focus:outline-none focus:shadow-lg text-sm sm:text-xs"
+          className="bg-gray-700 text-white border-none rounded-md px-3 py-2 focus:ring-2 focus:outline-none focus:shadow-lg text-sm sm:text-xs sm:w-2xs"
         >
           <option value="" disabled>
             USA
@@ -59,7 +59,7 @@ export default function Navbar() {
         {/* Continue Button */}
         <button
           onClick={handleContinue}
-          className="bg-yellow-400 hover:bg-blue-700 text-gray-950 px-4 py-2 rounded-md shadow focus:outline-none focus:ring-2 focus:ring-blue-400 text-sm sm:text-xs"
+          className="bg-yellow-400 hover:bg-blue-700 text-gray-950 px-4 py-2 rounded-md shadow focus:outline-none focus:ring-2 focus:ring-blue-400 text-sm sm:text-xs "
         >
           Continue
         </button>
@@ -75,16 +75,16 @@ export default function Navbar() {
               <select
                 value={selectedPhone}
                 onChange={handlePhoneDropdownChange}
-                className="bg-gray-700 text-white border-none rounded-md px-3 py-2 focus:ring-2 focus:outline-none focus:shadow-lg text-sm"
+                className="bg-gray-700 text-white border-none rounded-md px-3 py-2 focus:ring-2 focus:outline-none focus:shadow-lg text-sm sm:py-0 sm:px-0 "
               >
                 <option value="" disabled>
                   Select Phone Number
                 </option>
-                <option value="+1">USA +1 (123) 456 7890</option>
-                <option value="+91">India +91 (123) 456 7890</option>
-                <option value="+44">UK +44 (123) 456 7890</option>
-                <option value="+971">UAE (English) +971 (123) 456 7890</option>
-                <option value="+971">UAE (Arabic) +971 (123) 456 7890</option>
+                <option value="+1">USA +1(123)4567890</option>
+                <option value="+91">India +91(123)4567890</option>
+                <option value="+44">UK +44(123)4567890</option>
+                <option value="+971">UAE (English)+971(123)4567890</option>
+                <option value="+971">UAE (Arabic)+971(123)4567890</option>
               </select>
             </div>
           )}
