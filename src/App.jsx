@@ -1,4 +1,5 @@
 import "./App.css";
+import About from "./components/About/About";
 import Homepage from "./components/Homepage";
 import MarketingITSolutions from "./components/Marketing/MarketingITSolutions";
 import ProjectsPage from "./components/projects/ProjectsPage";
@@ -15,6 +16,7 @@ function App() {
         <MarketingITSolutions/>
 
         <Services/>
+        <About/>
       </div>
     </>
   );
