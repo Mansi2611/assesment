@@ -6,7 +6,7 @@ export default function HomePage() {
   return (
    
 
-    <div className="relative min-h-screen w-screen overflow-hidden">
+    <div className="relative min-h-screen w-screen overflow-hidden overflow-x-hidden">
   <video
     className="absolute top-0 left-0 w-full h-full object-cover"
     autoPlay

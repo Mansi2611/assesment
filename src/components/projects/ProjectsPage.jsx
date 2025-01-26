@@ -60,7 +60,7 @@ export default function ProjectsPage() {
   return (
     <>
       <div
-        className="relative w-screen overflow-hidden min-h-full h-auto lg:h-full mt-10 flex flex-col lg:flex-row gap-8"
+        className="relative w-screen overflow-x-hidden min-h-full h-auto lg:h-full mt-10 flex flex-col lg:flex-row gap-8"
         style={{
           background: "linear-gradient(to bottom, #FFFFFF 50%, #F6F6F6 50%)",
         }}

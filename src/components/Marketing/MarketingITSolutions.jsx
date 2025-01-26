@@ -15,8 +15,8 @@ export default function MarketingITSolutions() {
   });
 
   return (
-    <div className="py-8">
-      <div className="max-w-7xl mx-auto px-4 lg:px-12">
+    <div className="py-8 ">
+      <div className="max-w-7xl mx-auto px-4 lg:px-12 ">
         <div className="w-full flex flex-col lg:flex-row items-center lg:items-start gap-8 bg-white p-8">
           {/* Left Section */}
           <div className="w-full lg:w-5/7">
