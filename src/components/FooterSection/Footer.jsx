@@ -96,7 +96,7 @@ const Footer = () => {
               </span>
             </div>
 
-            <div className="text-4xl font-extrabold">LET'S TALK ?</div>
+            <div className="text-4xl text-gray-700 font-extrabold">LET'S TALK ?</div>
 
             <div>
               <button className="bg-[rgb(213,34,81)]  border-2 border-[rgb(213,34,81)] text-white py-1 px-6 w-auto sm:w-auto rounded-full text-sm md:text-base font-medium transition-all duration-300 cursor-pointer flex items-center">

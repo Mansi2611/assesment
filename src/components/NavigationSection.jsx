@@ -61,7 +61,7 @@ export default function NavigationSection() {
               key={index}
               className="flex items-center space-x-1 gap-2 cursor-pointer hover:text-red-600"
             >
-              <span className="text-lg sm:text-base ">{option}</span>
+              <span className="text-lg sm:text-base font-bold ">{option}</span>
               {option !== "Contact" && (
                 <span className="text-white text-xs hover:text-red-600"> ▼</span>
               )}

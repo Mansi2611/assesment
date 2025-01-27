@@ -1,5 +1,6 @@
 import "./App.css";
 import About from "./components/About/About";
+import { Clients } from "./components/Clients/Clients";
 import Footer from "./components/FooterSection/Footer";
 import Homepage from "./components/Homepage";
 import MarketingITSolutions from "./components/Marketing/MarketingITSolutions";
@@ -24,6 +25,7 @@ function App() {
         <About/>
 
         <Reviews/>
+        <Clients/>
         <Footer/>
       </div>
     </>

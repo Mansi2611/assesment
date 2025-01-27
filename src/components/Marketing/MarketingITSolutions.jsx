@@ -15,7 +15,7 @@ export default function MarketingITSolutions() {
   });
 
   return (
-    <div className="py-8 ">
+    <div className="py-8 border-b-1 border-gray-200">
       <div className="max-w-7xl mx-auto px-4 lg:px-12 ">
         <div className="w-full flex flex-col lg:flex-row items-center lg:items-start gap-8 bg-white p-8">
           {/* Left Section */}
@@ -66,33 +66,35 @@ export default function MarketingITSolutions() {
             </p>
 
             {/* Ratings and Stats */}
-            <div className="flex items-center justify-between gap-8 mb-4 w-full">
-              <div className="flex gap-8 text-center w-full">
-                {/* Ratings Section */}
-                <div className="flex flex-col items-center w-full sm:w-1/3">
-                  <h4 className="text-xl font-bold text-red-500">4.9</h4>
-                  <p className="text-gray-600 flex items-center justify-center">
-                    {[...Array(4)].map((_, index) => (
-                      <StarIcon key={index} className="w-5 h-5 text-yellow-500" />
-                    ))}
-                    <StarIcon className="w-5 h-5 text-yellow-500 opacity-50" />
-                  </p>
-                  <p className="text-gray-600">312 Ratings</p>
-                </div>
+            <div className="flex flex-wrap items-center justify-between gap-8 mb-4 w-full">
+            <div className="flex justify-between w-full mb-4">
+  {/* Ratings Section */}
+  <div className="flex flex-col items-center w-1/3">
+    <h4 className="text-xl font-bold text-red-500">4.9</h4>
+    <p className="text-gray-600 flex items-center justify-center">
+      {[...Array(4)].map((_, index) => (
+        <StarIcon key={index} className="w-5 h-5 text-yellow-500" />
+      ))}
+      <StarIcon className="w-5 h-5 text-yellow-500 opacity-50" />
+    </p>
+    <p className="text-gray-600">312 Ratings</p>
+  </div>
 
-                {/* Satisfied Clients Section */}
-                <div className="flex flex-col items-center w-full sm:w-1/3">
-                  <h4 className="text-xl font-bold text-red-500">3600+</h4>
-                  <p className="text-gray-600">Satisfied Clients</p>
-                </div>
+  {/* Satisfied Clients Section */}
+  <div className="flex flex-col items-center w-1/3">
+    <h4 className="text-xl font-bold text-red-500">3600+</h4>
+    <p className="text-gray-600">Satisfied Clients</p>
+  </div>
 
-                {/* Years of Experience Section */}
-                <div className="flex flex-col items-center w-full sm:w-1/3">
-                  <h4 className="text-xl font-bold text-red-500">14+</h4>
-                  <p className="text-gray-600">Years of Experience</p>
-                </div>
-              </div>
-            </div>
+  {/* Years of Experience Section */}
+  <div className="flex flex-col items-center w-1/3">
+    <h4 className="text-xl font-bold text-red-500">14+</h4>
+    <p className="text-gray-600">Years of Experience</p>
+  </div>
+</div>
+
+</div>
+
           </div>
         </div>
       </div>

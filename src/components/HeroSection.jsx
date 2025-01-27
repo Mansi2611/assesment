@@ -2,9 +2,17 @@
 
 import React from "react";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
+import { useInView } from "react-intersection-observer";
 
 export default function HeroSection() {
   const attributes = ["Trusted", "Awarded", "Proven"];
+
+
+  const { ref: textRef, inView: inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
 
   return (
     <div className="bg-transparent text-white py-12 px-6 md:px-10">
@@ -21,7 +29,11 @@ export default function HeroSection() {
       </div>
 
       {/* Heading */}
-      <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mt-10 md:mt-16 leading-snug sm:leading-tight">
+      <h1
+      ref={textRef}
+      className={`text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mt-10 md:mt-16 leading-snug sm:leading-tight transition-all duration-700 ease-out ${
+        inView ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+      }`}>
         Digital Marketing <br />
         and Web Designing Agency
       </h1>
@@ -34,7 +46,11 @@ export default function HeroSection() {
       {/* Action Buttons */}
       <div className="flex flex-col sm:flex-row justify-center items-center gap-4 md:gap-6 mt-10 md:mt-14 w-full">
         {/* Button 1 */}
-        <button className="bg-red-400 hover:bg-transparent border-2 border-red-400 text-white hover:text-red-400 py-3 px-6 w-full sm:w-auto rounded-full text-sm md:text-base font-medium transition-all duration-300 cursor-pointer flex items-center">
+        <button
+        ref={textRef}
+        className={`bg-red-400 hover:bg-transparent border-2 border-red-400 text-white hover:text-red-400 py-3 px-6 w-full sm:w-auto rounded-full text-sm md:text-base font-medium transition-all duration-300 cursor-pointer flex items-center ${
+        inView ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+      }`}>
           <span className="flex-grow text-center">Let’s Discuss Your Project</span>
           <span className="ml-3 flex justify-center items-center w-8 h-8 bg-white rounded-full">
             <ArrowRightIcon className="w-5 h-5 md:w-6 md:h-6 text-black font-bold" />
@@ -42,7 +58,11 @@ export default function HeroSection() {
         </button>
 
         {/* Button 2 */}
-        <button className="bg-transparent hover:bg-red-400 border-2 border-red-400 text-red-400 hover:text-white py-3 px-6 w-full sm:w-auto rounded-full text-sm md:text-base font-medium transition-all duration-300 cursor-pointer flex items-center">
+        <button
+        ref={textRef}
+        className={`bg-transparent hover:bg-red-400 border-2 border-red-400 text-red-400 hover:text-white py-3 px-6 w-full sm:w-auto rounded-full text-sm md:text-base font-medium transition-all duration-300 cursor-pointer flex items-center ${
+          inView ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+        }`}>
           <span className="flex-grow text-center">Free Growth Plan</span>
           <span className="ml-3 flex justify-center items-center w-8 h-8 bg-white rounded-full">
             <ArrowRightIcon className="w-5 h-5 md:w-6 md:h-6 text-black font-bold" />

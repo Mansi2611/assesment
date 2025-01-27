@@ -29,13 +29,15 @@ export default function Navbar() {
   return (
 <>
 
-<nav className="bg-transperant text-white px-6 py-4 flex items-center justify-between shadow-md">
+<nav className="bg-transperant text-white px-6 py-4 flex items-center justify-center  shadow-md">
       {/* Logo */}
-      <div className="text-xl font-bold">
+
+      <div className='sm:w-[70%] flex items-center justify-between'>
+        <div className="text-xl font-bold">
         <img
           src="https://www.matrixbricks.com/img/logo-white-new.webp"
           alt="Logo"
-          className="h-10 w-auto object-contain"
+          className="h-14 w-auto object-contain"
         />
       </div>
 
@@ -90,6 +92,8 @@ export default function Navbar() {
           )}
         </div>
       </div>
+      </div>
+      
 
     </nav>
     
