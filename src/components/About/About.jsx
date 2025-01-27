@@ -123,10 +123,17 @@ const About = () => {
         </div>
       </div>
 
+      <div className="relative flex justify-center items-center">
+        <div className="absolute w-[90%] h-0 border-b-[1px] border-gray-300"></div>
 
-      {/* technologies and partners components t be done  */}
+        <div className="flex items-center justify-center text-center relative w-62 text-gray-900 z-10 bg-white text-2xl font-bold">
+          Technologies & Partners
+        </div>
+        {/* <div className="border-2 w-36">Technologies & Partners</div> */}
+      </div>
+
       <div className="flex justify-center">
-        <Tech/>
+        <Tech />
       </div>
     </div>
   );

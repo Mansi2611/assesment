@@ -3,7 +3,7 @@
 
 
 @theme {
-  --animate-slide: slide 5s linear infinite;
+  --animate-slide: slide 15s linear infinite;
   @keyframes slide {
     from {
       transform: translateX(0);
