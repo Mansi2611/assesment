@@ -1,6 +1,7 @@
 import React from "react";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
 import { useInView } from "react-intersection-observer";
+import Tech from "./Tech";
 
 const About = () => {
   const { ref, inView } = useInView({
@@ -124,6 +125,9 @@ const About = () => {
 
 
       {/* technologies and partners components t be done  */}
+      <div className="flex justify-center">
+        <Tech/>
+      </div>
     </div>
   );
 };
