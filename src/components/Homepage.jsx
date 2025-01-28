@@ -1,8 +1,24 @@
-import React from "react";
+import React ,{useState,useEffect}from "react";
 import Navbar from "./Navbar";
 import HeroSection from "./HeroSection";
+import BackToTopButton from "./BackToTopButton";
 
 export default function HomePage() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    // Listen for scroll events to show the button when the user scrolls down
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
    
 
@@ -19,7 +35,7 @@ export default function HomePage() {
       </video>
 
       <div className="relative z-10">
-  
+      {isVisible && <BackToTopButton />}
         <Navbar />
         <HeroSection />
       </div>
