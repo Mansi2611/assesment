@@ -1,9 +1,14 @@
 import React from "react";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
+import { useState } from "react";
 import { useInView } from "react-intersection-observer";
+import PopupForm from "./PopupForm";
 
 export default function HeroSection() {
   const attributes = ["Trusted", "Awarded", "Proven"];
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  const handlePopupToggle = () => setIsPopupOpen((prev) => !prev);
 
   const { ref: textRef, inView: inView } = useInView({
     triggerOnce: true,
@@ -46,6 +51,7 @@ export default function HeroSection() {
           className={`bg-red-400 hover:bg-transparent border-2 border-red-400 text-white hover:text-red-400 py-3 px-6 w-full sm:w-auto rounded-full text-sm md:text-base font-medium transition-all duration-300 cursor-pointer flex items-center ${
             inView ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
           }`}
+          onClick={handlePopupToggle}
         >
           <span className="flex-grow text-center">
             Let’s Discuss Your Project
@@ -67,6 +73,12 @@ export default function HeroSection() {
           </span>
         </button>
       </div>
+      <PopupForm isOpen={isPopupOpen} onClose={handlePopupToggle} />
+
     </div>
   );
 }
+
+
+
+
