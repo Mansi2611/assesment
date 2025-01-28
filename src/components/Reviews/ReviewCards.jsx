@@ -115,6 +115,7 @@ export default function ReviewsComponent() {
                 src="/assets/images/clutch.png"
                 alt="Clutch"
                 className="h-8"
+                loading="lazy"
               />
             </span>
           </p>
@@ -246,6 +247,7 @@ export default function ReviewsComponent() {
             src="/assets/images/clutch.png"
             alt="Clutch"
             className="h-8 mx-auto"
+            loading="lazy"
           />
         </div>
       </div>

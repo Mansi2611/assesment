@@ -15,14 +15,24 @@ import {
 
 import industryData from "../../../public/assets/data/industryData.js";
 import IndustryImages from "./IndustryImages.jsx";
+import { useInView } from "react-intersection-observer";
 
 export const Clients = () => {
   const [selectedIndustry, setSelectedIndustry] = useState("healthcare");
-
+  const { ref, inView } = useInView({
+    triggerOnce: true, // Ensures the animation triggers only once when it enters the viewport
+    threshold: 0.1,    // Trigger when 10% of the element is visible
+  });
   return (
     <div className="overflow-x-hidden">
       <div className="flex justify-center">
-        <h3 className="text-4xl text-gray-700 font-bold mt-12">Our Clients</h3>
+        <h3 
+        ref={ref}
+        className={`text-4xl text-gray-700 font-bold mt-12 transition-transform duration-700 ${
+          inView ? "translate-x-0 opacity-100" : "-translate-x-50 opacity-0"
+        }`}
+        
+        >Our Clients</h3>
       </div>
 
       {/* icons and names */}

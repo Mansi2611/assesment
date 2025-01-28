@@ -1,7 +1,9 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
 import { useInView } from "react-intersection-observer";
-import Tech from "./Tech";
+
+const Tech = lazy(() => import("./Tech"));
+
 
 const About = () => {
   const { ref, inView } = useInView({
@@ -117,6 +119,7 @@ const About = () => {
                 src="/assets/images/about.webp"
                 alt="About Matrix Bricks"
                 className="w-full object-cover rounded-tl-[20%] rounded-br-[20%]"
+                loading="lazy"
               />
             </div>
           </div>

@@ -13,6 +13,7 @@ const IndustryImages = ({images}) => {
           src={image}
           alt={`Industry ${index + 1}`}
           className="w-40 h-30 border-1 border-gray-200 object-cover p-4 "
+          loading="lazy"
         />
       ))}
 </div>

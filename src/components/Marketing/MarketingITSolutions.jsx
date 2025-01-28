@@ -48,6 +48,7 @@ export default function MarketingITSolutions() {
                   src="/assets/images/triangleLogo.webp"
                   alt="arrow"
                   className="mb-6"
+                  loading="lazy"
                 />
               </div>
               <p className="text-gray-600 pb-4 text-sm font-medium">

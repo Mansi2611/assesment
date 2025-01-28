@@ -86,7 +86,10 @@ const Tech = () => {
         <div className="flex whitespace-nowrap">
           {images.map((tech, index) => (
             <div className="mx-8 cursor-pointer border-1 h-24 w-42 flex justify-center items-center p-2  border-gray-300" key={index}>
-              <img src={tech} alt={`tech-${index}`} />
+              <img src={tech} alt={`tech-${index}`}
+              loading="lazy"
+              />
+              
             </div>
           ))}
           
@@ -95,7 +98,9 @@ const Tech = () => {
         <div className="flex  whitespace-nowrap">
           {images.map((tech, index) => (
             <div className="mx-8 cursor-pointer border-1 h-24 w-42 flex justify-center items-center p-2  border-gray-300" key={index}>
-              <img src={tech} alt={`tech-${index}`} />
+              <img src={tech} alt={`tech-${index}`}
+              loading="lazy"
+              />
             </div>
           ))}
           

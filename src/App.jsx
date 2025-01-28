@@ -1,5 +1,6 @@
 import "./App.css";
 import About from "./components/About/About";
+import Build from "./components/Build/Build";
 import { Clients } from "./components/Clients/Clients";
 import Footer from "./components/FooterSection/Footer";
 import Homepage from "./components/Homepage";
@@ -11,19 +12,16 @@ import Services from "./components/Services/Services";
 function App() {
   return (
     <>
-      <div className="w-screen w-min-screen  overflow-x-hidden">
+      <div className="w-[100%] w-min-screen  overflow-x-hidden ">
         <Homepage />
 
-
-
-{/* overflow to be removed */}
         <ProjectsPage/>
 
         <MarketingITSolutions />
 
         <Services/>
         <About/>
-
+        <Build/>
         <Reviews/>
         <Clients/>
         <Footer/>

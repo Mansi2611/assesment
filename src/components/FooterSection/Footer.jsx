@@ -19,7 +19,7 @@ import {
 const Footer = () => {
   return (
     <div>
-      <div className="h-auto border-2 m-auto">
+      <div className="h-auto m-auto">
         <Banner />
 
         <div className="flex justify-center ">
@@ -119,6 +119,7 @@ const Footer = () => {
                 <img
                   className="inline-block mb-1 mr-3 "
                   src="/assets/images/india.webp"
+                  loading="lazy"
                 />
                 <span className="text-3xl font-bold text-gray-600">India</span>{" "}
               </div>
@@ -187,6 +188,7 @@ const Footer = () => {
                 <img
                   className="inline-block mb-1 mr-3 "
                   src="/assets/images/arab.webp"
+                  loading="lazy"
                 />
                 <span className="text-3xl font-bold text-gray-600">UAE</span>{" "}
               </div>
@@ -256,6 +258,7 @@ const Footer = () => {
                 <img
                   className="inline-block mb-1 mr-3 "
                   src="/assets/images/canada.webp"
+                  loading="lazy"
                 />
                 <span className="text-3xl font-bold text-gray-600">Canada</span>{" "}
               </div>
@@ -324,6 +327,7 @@ const Footer = () => {
                 <img
                   className="inline-block mb-1 mr-3 "
                   src="/assets/images/uk.webp"
+                  loading="lazy"
                 />
                 <span className="text-3xl font-bold text-gray-600">UK</span>{" "}
               </div>
@@ -392,6 +396,7 @@ const Footer = () => {
                 <img
                   className="inline-block mb-1 mr-3 "
                   src="/assets/images/us.webp"
+                  loading="lazy"
                 />
                 <span className="text-3xl font-bold text-gray-600">US</span>{" "}
               </div>
@@ -470,16 +475,19 @@ const Footer = () => {
                 src="/assets/images/partner1.webp"
                 alt="Partner 1"
                 className="h-16 w-auto object-contain"
+                loading="lazy"
               />
               <img
                 src="/assets/images/partner2.png"
                 alt="Partner 2"
                 className="h-16 w-auto object-contain"
+                loading="lazy"
               />
               <img
                 src="/assets/images/partner3.png"
                 alt="Partner 3"
                 className="h-16 w-auto object-contain"
+                loading="lazy"
               />
             </div>
           </div>
