@@ -30,7 +30,6 @@ export default function Navbar() {
 <>
 
 <nav className="bg-transperant text-white px-6 py-4 flex items-center justify-center  shadow-md">
-      {/* Logo */}
 
       <div className='sm:w-[70%] flex items-center justify-between'>
         <div className="text-xl font-bold">
@@ -41,9 +40,7 @@ export default function Navbar() {
         />
       </div>
 
-      {/* Right Section */}
       <div className="flex items-center space-x-4 sm:space-x-2">
-        {/* Dropdown */}
         <select
           value={selectedOption}
           onChange={handleDropdownChange}
@@ -58,7 +55,6 @@ export default function Navbar() {
           <option value="option4">UAE-Arabic</option>
         </select>
 
-        {/* Continue Button */}
         <button
           onClick={handleContinue}
           className="bg-yellow-400 hover:bg-blue-700 text-gray-950 px-4 py-2 rounded-md shadow focus:outline-none focus:ring-2 focus:ring-blue-400 text-sm sm:text-xs "
@@ -66,7 +62,6 @@ export default function Navbar() {
           Continue
         </button>
 
-        {/* Phone Icon (call icon) */}
         <div className="relative">
           <PhoneIcon
             className="h-6 w-6 cursor-pointer text-white"

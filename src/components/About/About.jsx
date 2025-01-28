@@ -1,9 +1,8 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy } from "react";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
 import { useInView } from "react-intersection-observer";
 
 const Tech = lazy(() => import("./Tech"));
-
 
 const About = () => {
   const { ref, inView } = useInView({
@@ -21,7 +20,6 @@ const About = () => {
       {/* Hero Section */}
       <div className="w-full flex bg-[rgb(213,34,81)] justify-center">
         <div className="w-[90%] lg:w-[75%] py-7 h-auto flex flex-col md:flex-row  justify-between items-center gap-6">
-          {/* Left Text */}
           <div className="text-center md:text-left ">
             <p
               className={`text-blue-100 transform transition-all duration-500 ${
@@ -44,7 +42,6 @@ const About = () => {
             </h2>
           </div>
 
-          {/* Call-to-Action Button */}
           <button className="bg-gray-950 border-2 border-gray-950 text-white py-2 px-6 w-full sm:w-auto rounded-full text-sm md:text-base font-medium transition-all duration-300 cursor-pointer flex items-center justify-center">
             <span className="flex-grow text-center">Free Growth Plan</span>
             <span className="ml-3 flex justify-center items-center w-8 h-8 bg-white rounded-full">
@@ -57,7 +54,6 @@ const About = () => {
       {/* About Section */}
       <div className="w-full flex justify-center">
         <div className="w-[90%] lg:w-[75%] flex flex-col lg:flex-row gap-10 py-12 lg:py-16">
-          {/* Left Side */}
           <div className="lg:w-1/2">
             <h2
               ref={headRef}
@@ -114,7 +110,6 @@ const About = () => {
                 ))}
               </div>
 
-              {/* Image */}
               <img
                 src="/assets/images/about.webp"
                 alt="About Matrix Bricks"
@@ -132,7 +127,6 @@ const About = () => {
         <div className="flex items-center justify-center text-center relative w-62 text-gray-900 z-10 bg-white text-2xl font-bold">
           Technologies & Partners
         </div>
-        {/* <div className="border-2 w-36">Technologies & Partners</div> */}
       </div>
 
       <div className="flex justify-center">

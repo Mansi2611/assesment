@@ -34,18 +34,6 @@ export default function ProjectsPage() {
     },
   ];
 
-  // const loopedProjects = [...projects, ...projects];
-
-  // const scrollNext = () => {
-  //   setScrollIndex((prevIndex) => (prevIndex + 1) % projects.length);
-  // };
-
-  // const scrollPrev = () => {
-  //   setScrollIndex(
-  //     (prevIndex) => (prevIndex - 1 + projects.length) % projects.length
-  //   );
-  // };
-
   useEffect(() => {
     const intervalId = setInterval(scrollNext, 3000);
     return () => clearInterval(intervalId);
@@ -54,80 +42,133 @@ export default function ProjectsPage() {
   useEffect(() => {
     const updateItemsPerView = () => {
       if (window.innerWidth < 640) {
-        setItemsPerView(1); // Small screens: 1 card
+        setItemsPerView(1);
       } else if (window.innerWidth < 1024) {
-        setItemsPerView(2); // Medium screens: 2 cards
+        setItemsPerView(2);
       } else {
-        setItemsPerView(3); // Large screens: 3 cards
+        setItemsPerView(3);
       }
     };
-  
+
     window.addEventListener("resize", updateItemsPerView);
-    updateItemsPerView(); // Call on initial render
-  
+    updateItemsPerView();
+
     return () => window.removeEventListener("resize", updateItemsPerView);
   }, []);
-  
 
   const filteredProjects =
-  activeStory === "All"
-    ? projects
-    : projects.filter((project) => project.fields === activeStory);
+    activeStory === "All"
+      ? projects
+      : projects.filter((project) => project.fields === activeStory);
 
-// Duplicate filtered projects for the infinite loop
-const loopedProjects = [...filteredProjects, ...filteredProjects];
+  const loopedProjects = [...filteredProjects, ...filteredProjects];
 
-// Adjusted scroll logic for infinite looping
-const scrollNext = () => {
-  setScrollIndex((prevIndex) => {
-    if (prevIndex + 1 >= filteredProjects.length) {
-      setTimeout(() => setScrollIndex(0), 500); // Reset to start
-    }
-    return (prevIndex + 1) % filteredProjects.length;
-  });
-};
+  const scrollNext = () => {
+    setScrollIndex((prevIndex) => {
+      // Reset To start
+      if (prevIndex + 1 >= filteredProjects.length) {
+        setTimeout(() => setScrollIndex(0), 500);
+      }
+      return (prevIndex + 1) % filteredProjects.length;
+    });
+  };
 
-const scrollPrev = () => {
-  setScrollIndex((prevIndex) => {
-    if (prevIndex === 0) {
-      setTimeout(() => setScrollIndex(filteredProjects.length - 1), 500); // Reset to end
-    }
-    return (prevIndex - 1 + filteredProjects.length) % filteredProjects.length;
-  });
-};
+  const scrollPrev = () => {
+    setScrollIndex((prevIndex) => {
+      if (prevIndex === 0) {
+        setTimeout(() => setScrollIndex(filteredProjects.length - 1), 500); // Reset to end
+      }
+      return (
+        (prevIndex - 1 + filteredProjects.length) % filteredProjects.length
+      );
+    });
+  };
 
   return (
     <>
-
-    <div className=" flex justify-center" style={{
-          background: "linear-gradient(to bottom, #FFFFFF 55%, #F6F6F6 40%)",
-        }}>
       <div
-        className="relative  w-[80%] overflow-x-hidden min-h-full h-auto lg:h-full mt-10 flex flex-col lg:flex-row gap-8"
+        className=" flex justify-center"
         style={{
-          background: "linear-gradient(to bottom, #FFFFFF 50%, #F6F6F6 50%)",
+          background: "linear-gradient(to bottom, #FFFFFF 55%, #F6F6F6 40%)",
         }}
       >
+        <div
+          className="relative  w-[80%] overflow-x-hidden min-h-full h-auto lg:h-full mt-10 flex flex-col lg:flex-row gap-8"
+          style={{
+            background: "linear-gradient(to bottom, #FFFFFF 50%, #F6F6F6 50%)",
+          }}
+        >
+          {/* Left Section */}
 
+          <div className="w-full lg:w-3/7  flex flex-col items-center justify-center bg-transparent px-8  mb-2 mt-4  lg:mb-4">
+            <h2 className="text-2xl md:text-5xl font-bold text-slate-700 mb-6 text-center lg:text-left">
+              Latest
+              <br />
+              Projects
+            </h2>
 
+            <img
+              src="https://www.matrixbricks.com/img/icon/arrow.webp"
+              alt="arrow"
+              className="mb-6 hidden lg:block "
+            />
 
-        {/* Left Section */}
+            {/* btns for larger screen */}
+            <div className=" items-center gap-4 hidden lg:flex">
+              <button
+                onClick={scrollPrev}
+                className="bg-transparent cursor-pointer border-2 border-black text-black hover:text-white hover:bg-black py-2 px-2 rounded-full flex justify-center items-center"
+              >
+                <ArrowLeftIcon className="w-6 h-6" />
+              </button>
+              <button
+                onClick={scrollNext}
+                className="bg-transparent cursor-pointer border-2 border-black text-black hover:text-white hover:bg-black py-2 px-2 rounded-full flex justify-center items-center"
+              >
+                <ArrowRightIcon className="w-6 h-6" />
+              </button>
+            </div>
+          </div>
 
-        <div className="w-full lg:w-3/7  flex flex-col items-center justify-center bg-transparent px-8  mb-2 mt-4  lg:mb-4">
-          <h2 className="text-2xl md:text-5xl font-bold text-slate-700 mb-6 text-center lg:text-left">
-            Latest
-            <br />
-            Projects
-          </h2>
+          {/* Right Section (Carousel) */}
 
-          <img
-            src="https://www.matrixbricks.com/img/icon/arrow.webp"
-            alt="arrow"
-            className="mb-6 hidden lg:block "
-          />
+          <div ref={carouselRef} className="overflow-hidden  w-full">
+            <div
+              className="flex transition-transform duration-500"
+              style={{
+                transform: `translateX(-${
+                  scrollIndex * (100 / itemsPerView)
+                }%)`,
+              }}
+            >
+              {loopedProjects.map((project, index) => (
+                <div
+                  key={index}
+                  className="flex-none w-full sm:w-1/2 md:w-1/2 lg:w-1/3 p-4"
+                  style={{ flex: `0 0 ${100 / itemsPerView}%` }}
+                >
+                  <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img
+                      src={project.img}
+                      alt={project.title}
+                      className="w-full h-48 object-cover"
+                      loading="lazy"
+                    />
+                    <div className="p-4">
+                      <p className="text-sm text-red-400 font-bold">
+                        {project.fields}
+                      </p>
+                      <h3 className="text-lg font-semibold">{project.title}</h3>
+                      <p className="text-gray-700">{project.description}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
 
-          {/* btns for larger screen */}
-          <div className=" items-center gap-4 hidden lg:flex">
+          {/* btns for smaller screen */}
+          <div className="flex justify-center items-center gap-4 md:hidden ">
             <button
               onClick={scrollPrev}
               className="bg-transparent cursor-pointer border-2 border-black text-black hover:text-white hover:bg-black py-2 px-2 rounded-full flex justify-center items-center"
@@ -142,62 +183,7 @@ const scrollPrev = () => {
             </button>
           </div>
         </div>
-
-        {/* Right Section (Carousel) */}
-        
-
-<div ref={carouselRef} className="overflow-hidden  w-full">
-  <div
-    className="flex transition-transform duration-500"
-    style={{
-      transform: `translateX(-${scrollIndex * (100 / itemsPerView)}%)`,
-    }}
-  >
-    {loopedProjects.map((project, index) => (
-      <div
-        key={index}
-        className="flex-none w-full sm:w-1/2 md:w-1/2 lg:w-1/3 p-4"
-        style={{ flex: `0 0 ${100 / itemsPerView}%` }}
-      >
-        <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-          <img
-            src={project.img}
-            alt={project.title}
-            className="w-full h-48 object-cover"
-            loading="lazy"
-          />
-          <div className="p-4">
-            <p className="text-sm text-red-400 font-bold">{project.fields}</p>
-            <h3 className="text-lg font-semibold">{project.title}</h3>
-            <p className="text-gray-700">{project.description}</p>
-          </div>
-        </div>
       </div>
-    ))}
-  </div>
-</div>
-
-
-
-{/* btns for smaller screen */}
-        <div className="flex justify-center items-center gap-4 md:hidden ">
-            <button
-              onClick={scrollPrev}
-              className="bg-transparent cursor-pointer border-2 border-black text-black hover:text-white hover:bg-black py-2 px-2 rounded-full flex justify-center items-center"
-            >
-              <ArrowLeftIcon className="w-6 h-6" />
-            </button>
-            <button
-              onClick={scrollNext}
-              className="bg-transparent cursor-pointer border-2 border-black text-black hover:text-white hover:bg-black py-2 px-2 rounded-full flex justify-center items-center"
-            >
-              <ArrowRightIcon className="w-6 h-6" />
-            </button>
-          </div>
-
-      </div>
-    </div>
-      
 
       {/* Success Stories Section */}
       <div className="bg-gray-100 py-8">

@@ -250,24 +250,23 @@ export default function NavigationSection() {
   ];
 
   const handleMouseEnter = (index) => {
-    setActiveDropdown(index); // Display the dropdown on hover
+    setActiveDropdown(index);
   };
 
   const handleMouseLeave = () => {
-    setActiveDropdown(null); // Hide dropdown when mouse leaves
+    setActiveDropdown(null);
   };
 
   return (
     <div className="bg-transparent text-white py-6">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Desktop Navigation */}
         <div className="hidden lg:flex justify-center items-center space-x-8">
           {options.map((option, index) => (
             <div
               key={index}
               className="relative"
-              onMouseEnter={() => handleMouseEnter(index)} // Hover to show dropdown
-              onMouseLeave={handleMouseLeave} // Hide dropdown when mouse leaves
+              onMouseEnter={() => handleMouseEnter(index)}
+              onMouseLeave={handleMouseLeave}
             >
               <div className="flex items-center space-x-1 gap-2 cursor-pointer hover:text-red-600 ">
                 <span className="text-lg sm:text-base font-bold ">
@@ -283,7 +282,7 @@ export default function NavigationSection() {
                   className="absolute  left-1/2 transform -translate-x-1/2 border-2 w-[72vw]  ml-34 bg-white text-gray-800 shadow-lg rounded-lg z-10 flex flex-wrap gap-4 p-4"
                   onMouseEnter={() => handleMouseEnter(index)}
                   onMouseLeave={handleMouseLeave}
-                  style={{ maxWidth: "90vw", justifyContent: "start" }} // Limits the width and allows wrapping
+                  style={{ maxWidth: "90vw", justifyContent: "start" }}
                 >
                   {option.dropdown.map((item, i) => (
                     <div
@@ -315,14 +314,13 @@ export default function NavigationSection() {
                 </div>
               )}
 
-              {/* Other options with simpler dropdowns */}
               {option.show !== true &&
                 option.dropdown &&
                 activeDropdown === index && (
                   <div
                     className="absolute top-full left-0 mt-1 bg-white text-gray-800 shadow-lg rounded-lg w-48 z-10"
-                    onMouseEnter={() => handleMouseEnter(index)} // Keep dropdown open when mouse enters
-                    onMouseLeave={handleMouseLeave} // Close dropdown when mouse leaves
+                    onMouseEnter={() => handleMouseEnter(index)}
+                    onMouseLeave={handleMouseLeave}
                   >
                     <ul className="p-2">
                       {option.dropdown.map((item, i) => (
@@ -331,7 +329,6 @@ export default function NavigationSection() {
                           className="px-4 py-1 hover:bg-gray-100 cursor-pointer hover:text-red-600"
                         >
                           {item.label || item}{" "}
-                          {/* Render `item.label` for objects and item text for strings */}
                         </li>
                       ))}
                     </ul>
@@ -341,7 +338,6 @@ export default function NavigationSection() {
           ))}
         </div>
 
-        {/* Mobile Navigation (Hamburger menu) */}
         <div className="lg:hidden mt-4">
           <button
             onClick={handleMenuToggle}

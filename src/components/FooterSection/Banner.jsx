@@ -21,7 +21,6 @@ const Banner = () => {
       {/* Mail Section */}
       <div className="w-full flex bg-[#FB2C36] justify-center">
         <div className="w-[90%] lg:w-[75%] py-7 h-auto flex flex-col md:flex-row justify-between items-center gap-6">
-          {/* Left Text */}
           <div className="text-center md:text-left">
             <p className="text-blue-100">
               <span className="inline-block">

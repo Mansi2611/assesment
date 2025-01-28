@@ -44,52 +44,50 @@ export default function ReviewsComponent() {
 
   const renderStars = (rating) => {
     console.log(rating);
-    
+
     const fullStars = Math.floor(rating);
     console.log(fullStars);
-    
+
     const halfStar = rating % 1 >= 0.5;
-    console.log("half : ",halfStar);
-    
+    console.log("half : ", halfStar);
+
     const emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
     console.log(halfStar);
-    
-  
+
     const stars = [];
-  
+
     // Full stars
     for (let i = 0; i < fullStars; i++) {
       stars.push(
         <StarIcon key={`full-${i}`} className="w-5 h-5 text-red-500" />
       );
     }
-  
+
     // Half star
     if (halfStar) {
-        console.log("for halfstar");
-        
+      console.log("for halfstar");
+
       stars.push(
         <StarIcon
           key="half"
           className="w-5 h-5 text-red-500"
           style={{
-            clipPath: "polygon(0 0, 50% 0, 50% 100%, 0 100%)", 
+            clipPath: "polygon(0 0, 50% 0, 50% 100%, 0 100%)",
           }}
         />
       );
     }
-  
+
     // Empty stars
     for (let i = 0; i < emptyStars; i++) {
       stars.push(
         <StarIcon key={`empty-${i}`} className="w-5 h-5 text-gray-300" />
       );
     }
-  
+
     return stars;
   };
-  
-  
+
   const startIndex = (currentPage - 1) * itemsPerPage;
   const selectedCards = cards.slice(startIndex, startIndex + itemsPerPage);
 
@@ -160,7 +158,7 @@ export default function ReviewsComponent() {
           ))}
         </div>
 
-        {/* Responsive Reviews Grid with Pagination */}
+        {/*  Reviews Grid with Pagination */}
         <div className="grid grid-cols-1 gap-6 lg:hidden">
           {selectedCards.map((review, index) => (
             <div
@@ -241,7 +239,7 @@ export default function ReviewsComponent() {
           </button>
         </div>
 
-        {/* Bottom Image Visible on Small Screens */}
+        {/* Bottom Image Visible for Small Screens */}
         <div className="block mt-8 lg:hidden ">
           <img
             src="/assets/images/clutch.png"

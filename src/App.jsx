@@ -14,17 +14,14 @@ function App() {
     <>
       <div className="w-[100%] w-min-screen  overflow-x-hidden ">
         <Homepage />
-
-        <ProjectsPage/>
-
+        <ProjectsPage />
         <MarketingITSolutions />
-
-        <Services/>
-        <About/>
-        <Build/>
-        <Reviews/>
-        <Clients/>
-        <Footer/>
+        <Services />
+        <About />
+        <Build />
+        <Reviews />
+        <Clients />
+        <Footer />
       </div>
     </>
   );
