@@ -1,7 +1,6 @@
 import React from "react";
 
 const IndustryImages = ({ images }) => {
-  console.log(images);
 
   return (
     <div className=" p-12 w-[85%]">

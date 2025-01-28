@@ -43,16 +43,11 @@ export default function ReviewsComponent() {
   ];
 
   const renderStars = (rating) => {
-    console.log(rating);
-
     const fullStars = Math.floor(rating);
-    console.log(fullStars);
 
     const halfStar = rating % 1 >= 0.5;
-    console.log("half : ", halfStar);
 
     const emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
-    console.log(halfStar);
 
     const stars = [];
 
@@ -65,8 +60,6 @@ export default function ReviewsComponent() {
 
     // Half star
     if (halfStar) {
-      console.log("for halfstar");
-
       stars.push(
         <StarIcon
           key="half"

@@ -57,7 +57,7 @@ export default function PopupForm({ isOpen, onClose }) {
     if (Object.keys(formErrors).length > 0) {
       setErrors(formErrors);
     } else {
-      console.log("Form Data Submitted:", formData);
+    //   console.log("Form Data Submitted:", formData);
 
       onClose();
       alert("Form submitted successfully!");
