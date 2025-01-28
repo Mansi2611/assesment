@@ -7,7 +7,6 @@ export default function HomePage() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Listen for scroll events to show the button when the user scrolls down
     const handleScroll = () => {
       if (window.scrollY > 300) {
         setIsVisible(true);
