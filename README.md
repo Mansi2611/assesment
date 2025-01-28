@@ -3,29 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home Page Development - README</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-      line-height: 1.6;
-    }
-    h1 {
-      color: #4CAF50;
-    }
-    h2 {
-      color: #333;
-    }
-    p {
-      color: #555;
-    }
-    code {
-      font-family: 'Courier New', Courier, monospace;
-    }
-    ul {
-      list-style-type: square;
-    }
-  </style>
+  
 </head>
 <body>
 
