@@ -12,6 +12,7 @@ import Services from "./components/Services/Services";
 function App() {
   return (
     <>
+    
       <div className="w-[100%] w-min-screen  overflow-x-hidden ">
         <Homepage />
         <ProjectsPage />
