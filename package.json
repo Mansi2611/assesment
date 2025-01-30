@@ -1,5 +1,5 @@
 {
-  "homepage":"https://Mansi2611.github.io/matrixbricks",
+  "homepage":"https://Mansi2611.github.io/assesment",
   "name": "matrix-bricks-hp",
   "private": true,
   "version": "0.0.0",
@@ -7,8 +7,7 @@
   "scripts": {
     "dev": "vite",
     "predeploy":"npm run build",
-    "deploy":"gh-pages -d build",
-    
+    "deploy":"gh-pages -d dist",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
