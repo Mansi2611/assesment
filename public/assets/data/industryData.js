@@ -32,7 +32,7 @@ import ecommerce8 from "../images/Industries/ecommers/Ecommers8.png";
 // Importing F&B images
 // import fnb1 from "../images/Industries/FB/fb1.png";
 // import fnb2 from "../images/Industries/FB/fb2.png";
-import fnb3 from "../images/Industries/FB/fb3.png";
+// import fnb3 from "../images/Industries/FB/fb3.png";
 import fnb4 from "../images/Industries/FB/fb4.png";
 import fnb5 from "../images/Industries/FB/fb5.png";
 import fnb6 from "../images/Industries/FB/fb6.png";
@@ -115,7 +115,7 @@ const industryData = {
     ecommerce7,
     ecommerce8,
   ],
-  fnb: [  fnb3, fnb4, fnb5, fnb6, fnb7, fnb8, fnb9],
+  fnb: [   fnb4, fnb5, fnb6, fnb7, fnb8, fnb9],
   realEstate: [
     real1,
     real2,
