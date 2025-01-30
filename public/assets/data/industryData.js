@@ -30,7 +30,7 @@ import ecommerce7 from "../images/Industries/ecommers/Ecommers7.png";
 import ecommerce8 from "../images/Industries/ecommers/Ecommers8.png";
 
 // Importing F&B images
-import fnb1 from "../images/Industries/FB/fb1.png";
+// import fnb1 from "../images/Industries/FB/fb1.png";
 import fnb2 from "../images/Industries/FB/fb2.png";
 import fnb3 from "../images/Industries/FB/fb3.png";
 import fnb4 from "../images/Industries/FB/fb4.png";
