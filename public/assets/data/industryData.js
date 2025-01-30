@@ -21,14 +21,13 @@ import logistics4 from "../images/Industries/Logistic/logistic4.png";
 import logistics5 from "../images/Industries/Logistic/logistic5.png";
 
 // Importing ecommerce images
-import ecommerce1 from "../images/Industries/Ecommers/Ecommers1.png";
-import ecommerce2 from "../images/Industries/Ecommers/Ecommers2.png";
-import ecommerce3 from "../images/Industries/Ecommers/Ecommers3.png";
-import ecommerce4 from "../images/Industries/Ecommers/Ecommers4.png";
-import ecommerce5 from "../images/Industries/Ecommers/Ecommers5.png";
-import ecommerce6 from "../images/Industries/Ecommers/Ecommers6.png";
-import ecommerce7 from "../images/Industries/Ecommers/Ecommers7.png";
-import ecommerce8 from "../images/Industries/Ecommers/Ecommers8.png";
+import ecommerce1 from "../images/Industries/ecommers/Ecommers1.png";
+import ecommerce2 from "../images/Industries/ecommers/Ecommers2.png";
+import ecommerce4 from "../images/Industries/ecommers/Ecommers4.png";
+import ecommerce5 from "../images/Industries/ecommers/Ecommers5.png";
+import ecommerce6 from "../images/Industries/ecommers/Ecommers6.png";
+import ecommerce7 from "../images/Industries/ecommers/Ecommers7.png";
+import ecommerce8 from "../images/Industries/ecommers/Ecommers8.png";
 
 // Importing F&B images
 import fnb1 from "../images/Industries/FB/fb1.png";
