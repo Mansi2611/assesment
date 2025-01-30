@@ -65,19 +65,19 @@ import fashion8 from "../images/Industries/fashion/fashion8.png";
 import fashion9 from "../images/Industries/fashion/fashion9.png";
 
 // Importing IT images
-import it1 from "../images/Industries/IT/it1.png";
-import it2 from "../images/Industries/IT/it2.png";
-import it3 from "../images/Industries/IT/it3.png";
-import it4 from "../images/Industries/IT/it4.png";
-import it5 from "../images/Industries/IT/it5.png";
-import it6 from "../images/Industries/IT/it6.png";
-import it7 from "../images/Industries/IT/it7.png";
-import it8 from "../images/Industries/IT/it8.png";
-import it9 from "../images/Industries/IT/it9.png";
-import it10 from "../images/Industries/IT/it10.png";
-import it11 from "../images/Industries/IT/it11.png";
-import it12 from "../images/Industries/IT/it12.png";
-import it13 from "../images/Industries/IT/it13.png";
+import it1 from "../images/Industries/It/it1.png";
+import it2 from "../images/Industries/It/it2.png";
+import it3 from "../images/Industries/It/it3.png";
+import it4 from "../images/Industries/It/it4.png";
+import it5 from "../images/Industries/It/it5.png";
+import it6 from "../images/Industries/It/it6.png";
+import it7 from "../images/Industries/It/it7.png";
+import it8 from "../images/Industries/It/it8.png";
+import it9 from "../images/Industries/It/it9.png";
+import it10 from "../images/Industries/It/it10.png";
+import it11 from "../images/Industries/It/it11.png";
+import it12 from "../images/Industries/It/it12.png";
+import it13 from "../images/Industries/It/it13.png";
 
 // Importing NGO images
 import ngo1 from "../images/Industries/NGO/ngo1.png";
