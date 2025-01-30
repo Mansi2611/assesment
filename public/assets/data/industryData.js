@@ -54,7 +54,7 @@ import real10 from "../images/Industries/Infra/real10.png";
 import real11 from "../images/Industries/Infra/real11.png";
 
 // Importing fashion images
-import fashion1 from "../images/Industries/Fashion/fashion1.png";
+// import fashion1 from "../images/Industries/Fashion/fashion1.png";
 import fashion2 from "../images/Industries/Fashion/fashion2.png";
 import fashion3 from "../images/Industries/Fashion/fashion3.png";
 import fashion4 from "../images/Industries/Fashion/fashion4.png";
@@ -130,7 +130,7 @@ const industryData = {
     real11,
   ],
   fashion: [
-    fashion1,
+    // fashion1,
     fashion2,
     fashion3,
     fashion4,
