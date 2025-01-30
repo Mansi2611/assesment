@@ -115,7 +115,7 @@ const industryData = {
     ecommerce7,
     ecommerce8,
   ],
-  fnb: [ fnb2, fnb3, fnb4, fnb5, fnb6, fnb7, fnb8, fnb9],
+  fnb: [  fnb3, fnb4, fnb5, fnb6, fnb7, fnb8, fnb9],
   realEstate: [
     real1,
     real2,
