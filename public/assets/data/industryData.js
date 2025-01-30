@@ -54,15 +54,15 @@ import real10 from "../images/Industries/Infra/real10.png";
 import real11 from "../images/Industries/Infra/real11.png";
 
 // Importing fashion images
-// import fashion1 from "../images/Industries/Fashion/fashion1.png";
-import fashion2 from "../images/Industries/Fashion/fashion2.png";
-import fashion3 from "../images/Industries/Fashion/fashion3.png";
-import fashion4 from "../images/Industries/Fashion/fashion4.png";
-import fashion5 from "../images/Industries/Fashion/fashion5.png";
-import fashion6 from "../images/Industries/Fashion/fashion6.png";
-import fashion7 from "../images/Industries/Fashion/fashion7.png";
-import fashion8 from "../images/Industries/Fashion/fashion8.png";
-import fashion9 from "../images/Industries/Fashion/fashion9.png";
+import fashion1 from "../images/Industries/fashion/fashion1.png";
+import fashion2 from "../images/Industries/fashion/fashion2.png";
+import fashion3 from "../images/Industries/fashion/fashion3.png";
+import fashion4 from "../images/Industries/fashion/fashion4.png";
+import fashion5 from "../images/Industries/fashion/fashion5.png";
+import fashion6 from "../images/Industries/fashion/fashion6.png";
+import fashion7 from "../images/Industries/fashion/fashion7.png";
+import fashion8 from "../images/Industries/fashion/fashion8.png";
+import fashion9 from "../images/Industries/fashion/fashion9.png";
 
 // Importing IT images
 import it1 from "../images/Industries/IT/it1.png";
@@ -130,7 +130,7 @@ const industryData = {
     real11,
   ],
   fashion: [
-    // fashion1,
+    fashion1,
     fashion2,
     fashion3,
     fashion4,
