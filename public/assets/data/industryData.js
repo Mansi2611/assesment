@@ -35,10 +35,10 @@ import ecommerce8 from "../images/Industries/ecommers/Ecommers8.png";
 // import fnb3 from "../images/Industries/FB/fb3.png";
 import fnb4 from "../images/Industries/FB/fb4.png";
 import fnb5 from "../images/Industries/FB/fb5.png";
-import fnb6 from "../images/Industries/FB/fb6.png";
-import fnb7 from "../images/Industries/FB/fb7.png";
-import fnb8 from "../images/Industries/FB/fb8.png";
-import fnb9 from "../images/Industries/FB/fb9.png";
+import fnb6 from "../images/Industries/fb/fb6.png";
+import fnb7 from "../images/Industries/fb/fb7.png";
+import fnb8 from "../images/Industries/fb/fb8.png";
+import fnb9 from "../images/Industries/fb/fb9.png";
 
 // Importing real estate images
 import real1 from "../images/Industries/Infra/real1.png";
